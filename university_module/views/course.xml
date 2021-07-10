@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--tree view of the course model-->
+    <record id="course_tree" model="ir.ui.view">
+        <field name="name">uni.course.tree</field>
+        <field name="model">uni.course</field>
+        <field name="arch" type="xml">
+            <tree string="Course">
+                <field name="course_id"/>
+                <field name="name"/>
+                <field name="department"/>
+                <field name="faculty"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--form view of the course model-->
+    <record id="course_form" model="ir.ui.view">
+        <field name="name">uni.course.form</field>
+        <field name="model">uni.course</field>
+        <field name="arch" type="xml">
+            <form string="Course">
+                <header>
+                    Course
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+
+                    </div>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="course_id" placeholder="Course ID"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="department"/>
+                            <field name="faculty"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Students">
+                            <field name="student_course">
+                                <tree editable="bottom">
+                                    <field name="student_id"/>
+                                    <!--                                    <field name="student_gender"/>-->
+                                    <field name="student_email"/>
+                                    <!--                                    <field name="student_course_id" invisible="1"/>-->
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="student_id"/>
+                                        </group>
+                                        <group>
+                                            <field name="student_email"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--action of the Course menu-->
+    <record id="action_course" model="ir.actions.act_window">
+        <field name="name">Course</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">uni.course</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Enter course information
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="uni_course_menu" name="Course" action="action_course" sequence="10"/>
+
+
+</odoo>
