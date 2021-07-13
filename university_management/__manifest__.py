@@ -1,8 +1,8 @@
 {
-    'name': 'University Module',
+    'name': 'University Management',
     'version': '13.0.1.0.0',
     'category': 'Employees',
-    'summary': 'A module for university',
+    'summary': 'A management module for universities',
     'sequence': '1',
     'license': 'AGPL-3',
     'author': 'Armun Alam',
@@ -12,7 +12,8 @@
         'views/faculty.xml',
         'views/student.xml',
         'views/department.xml',
-        'views/course.xml'
+        'views/course.xml',
+        'data/sequence.xml'
     ],
     'images': [],
     'installable': True,
