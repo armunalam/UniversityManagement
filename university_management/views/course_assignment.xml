@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--tree view of the course_assignment model-->
+    <record id="course_assignment_tree" model="ir.ui.view">
+        <field name="name">uni.course_assignment.tree</field>
+        <field name="model">uni.course_assignment</field>
+        <field name="arch" type="xml">
+            <tree string="Course Assignment">
+                <field name="department"/>
+                <field name="faculty"/>
+                <field name="faculty_credit_left"/>
+                <field name="course_assign"/>
+
+
+                <field name="c_name"/>
+                <field name="course_credit"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--form view of the course_assignment model-->
+    <record id="course_assignment_form" model="ir.ui.view">
+        <field name="name">uni.course_assignment.form</field>
+        <field name="model">uni.course_assignment</field>
+        <field name="arch" type="xml">
+            <form string="Course Assignment">
+                <header>
+                    Course Assignment
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+
+                    </div>
+                    <group>
+                        <group>
+                            <field name="department"/>
+                            <field name="faculty"/>
+                            <field name="faculty_credit_left"/>
+                        </group>
+                        <group>
+                            <field name="course_assign"/>
+                            <field name="c_name"/>
+                            <field name="course_credit"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--action of the Course Assignment menu-->
+    <record id="action_course_assignment" model="ir.actions.act_window">
+        <field name="name">Course Assignment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">uni.course_assignment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Enter course assignment information
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="uni_course_assignment_menu" name="Course Assignment" parent="university_root_menu"
+              action="action_course_assignment" sequence="8"/>
+
+
+</odoo>

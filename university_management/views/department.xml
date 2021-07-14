@@ -54,7 +54,8 @@
         </field>
     </record>
 
-    <menuitem id="uni_department_menu" name="Department" action="action_department" sequence="10"/>
+    <menuitem id="university_root_menu" name="University Management" sequence="1"/>
+    <menuitem id="uni_department_menu" name="Department" parent="university_root_menu" action="action_department" sequence="2"/>
 
 
 </odoo>

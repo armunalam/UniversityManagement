@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 
 class Department(models.Model):
     _name = 'uni.department'
+    _rec_name = 'dept_name'
     _sql_constraints = [
         ('unique_code_department',
          'UNIQUE(dept_code)',
@@ -22,5 +23,5 @@ class Department(models.Model):
             if len(record.dept_code) < 2 or len(record.dept_code) > 7:
                 raise ValidationError('The department code must be between 2 and 7 characters long.')
 
-    def name_get(self):
-        return [(record.id, record.dept_name) for record in self]
+    # def name_get(self):
+    #     return [(record.id, record.dept_name) for record in self]

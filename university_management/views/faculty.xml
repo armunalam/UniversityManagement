@@ -69,7 +69,7 @@
         </field>
     </record>
 
-    <menuitem id="uni_faculty_menu" name="Faculty" action="action_faculty" sequence="10"/>
+    <menuitem id="uni_faculty_menu" name="Faculty" parent="university_root_menu" action="action_faculty" sequence="4"/>
 
 
 </odoo>

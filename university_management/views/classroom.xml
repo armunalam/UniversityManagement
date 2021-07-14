@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--tree view of the classroom model-->
+    <record id="classroom_tree" model="ir.ui.view">
+        <field name="name">uni.classroom.tree</field>
+        <field name="model">uni.classroom</field>
+        <field name="arch" type="xml">
+            <tree string="Classroom">
+                <field name="department"/>
+                <field name="course"/>
+                <field name="room_no"/>
+                <field name="day"/>
+                <field name="time_from" widget="float_time"/>
+                <field name="time_to" widget="float_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--form view of the classroom model-->
+    <record id="classroom_form" model="ir.ui.view">
+        <field name="name">uni.classroom.form</field>
+        <field name="model">uni.classroom</field>
+        <field name="arch" type="xml">
+            <form string="Classroom">
+                <header>
+                    Classroom
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+
+                    </div>
+                    <group>
+                        <group>
+                            <field name="department"/>
+                            <field name="course"/>
+                            <field name="room_no"/>
+
+                        </group>
+                        <group>
+                            <field name="day"/>
+                            <field name="time_from" widget="float_time"/>
+                            <field name="time_to" widget="float_time"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--action of the Classroom menu-->
+    <record id="action_classroom" model="ir.actions.act_window">
+        <field name="name">Classroom</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">uni.classroom</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Enter course assignment information
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="uni_classroom_menu" name="Classroom" parent="university_root_menu"
+              action="action_classroom" sequence="9"/>
+
+
+</odoo>

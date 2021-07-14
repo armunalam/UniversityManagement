@@ -3,4 +3,6 @@ access_uni_faculty,access.uni.faculty,model_uni_faculty,,1,1,1,1
 access_uni_student,access.uni.student,model_uni_student,,1,1,1,1
 access_uni_department,access.uni.department,model_uni_department,,1,1,1,1
 access_uni_course,access.uni.course,model_uni_course,,1,1,1,1
-
+access_uni_result,access.uni.result,model_uni_result,,1,1,1,1
+access_uni_course_assignment,access.uni.course_assignment,model_uni_course_assignment,,1,1,1,1
+access_uni_classroom,access.uni.classroom,model_uni_classroom,,1,1,1,1

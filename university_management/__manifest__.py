@@ -9,10 +9,13 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
+        'views/department.xml',
         'views/faculty.xml',
         'views/student.xml',
-        'views/department.xml',
         'views/course.xml',
+        'views/result.xml',
+        'views/course_assignment.xml',
+        'views/classroom.xml',
         'data/sequence.xml'
     ],
     'images': [],

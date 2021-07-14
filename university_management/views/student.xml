@@ -6,9 +6,12 @@
         <field name="model">uni.student</field>
         <field name="arch" type="xml">
             <tree string="Student">
+                <field name="student_id"/>
                 <field name="name"/>
-                <field name="gender"/>
-                <field name="email"/>
+                <field name="student_email"/>
+                <field name="contact_no"/>
+                <field name="date"/>
+                <field name="address"/>
                 <field name="department"/>
             </tree>
         </field>
@@ -36,16 +39,15 @@
                     <group>
                         <group>
                             <field name="name"/>
-                            <!--<field name="name"/>-->
-                            <field name="gender"/>
-                            <field name="email"/>
-                            <field name="department"/>
+                            <field name="student_email"/>
+                            <field name="contact_no"/>
                         </group>
-                        <!--<group>-->
-
-                        <!--</group>-->
+                        <group>
+                            <field name="department"/>
+                            <field name="date"/>
+                            <field name="address"/>
+                        </group>
                     </group>
-
                 </sheet>
 
             </form>
@@ -66,7 +68,7 @@
         </field>
     </record>
 
-    <menuitem id="uni_student_menu" name="Student" action="action_student" sequence="10"/>
+    <menuitem id="uni_student_menu" name="Student" parent="university_root_menu" action="action_student" sequence="5"/>
 
 
 </odoo>

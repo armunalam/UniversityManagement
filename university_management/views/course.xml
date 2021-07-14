@@ -64,7 +64,7 @@
         </field>
     </record>
 
-    <menuitem id="uni_course_menu" name="Course" action="action_course" sequence="10"/>
+    <menuitem id="uni_course_menu" name="Course" parent="university_root_menu" action="action_course" sequence="3"/>
 
 
 </odoo>

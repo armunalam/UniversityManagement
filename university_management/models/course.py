@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 
 class Course(models.Model):
     _name = 'uni.course'
+    _rec_name = 'course_code'
     _sql_constraints = [
         ('unique_code_course',
          'UNIQUE(course_code)',
@@ -40,6 +41,3 @@ class Course(models.Model):
         for record in self:
             if record.credit < 0.5 or record.credit > 5:
                 raise ValidationError('The number of credits must be between 0.5 and 5.')
-
-    def name_get(self):
-        return [(record.id, record.course_name) for record in self]
