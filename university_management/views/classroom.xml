@@ -63,6 +63,4 @@
 
     <menuitem id="uni_classroom_menu" name="Classroom" parent="university_root_menu"
               action="action_classroom" sequence="9"/>
-
-
 </odoo>
