@@ -16,6 +16,7 @@
         'views/result.xml',
         'views/course_assignment.xml',
         'views/classroom.xml',
+        'views/course_enrollment.xml',
         'data/sequence.xml'
     ],
     'images': [],

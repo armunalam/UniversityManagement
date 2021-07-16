@@ -5,3 +5,4 @@ from . import course
 from . import result
 from . import course_assignment
 from . import classroom
+from . import course_enrollment
