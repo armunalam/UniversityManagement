@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 
 class CourseAssignment(models.Model):
     _name = 'uni.course_assignment'
+    _rec_name = 'course_assign'
     _sql_constraints = [
         ('unique_course_assign',
          'UNIQUE(course_assign)',
@@ -14,8 +15,8 @@ class CourseAssignment(models.Model):
     faculty = fields.Many2one('uni.faculty', string='Faculty')
     faculty_credit_left = fields.Float(string='Credits Remaining', related='faculty.credit')
     # faculty_credit_remaining = fields.Float(string='Credits Remaining', related='faculty.credit_taken')
-    course_assign = fields.Many2one('uni.course', string='Course')
-    c_name = fields.Char(string='Course Code', related='course_assign.course_name')
+    course_assign = fields.Many2one('uni.course', string='Course Code')
+    c_name = fields.Char(string='Course Name', related='course_assign.course_name')
     course_credit = fields.Float(string='Course Credit', related='course_assign.credit')
 
     @api.onchange('department')

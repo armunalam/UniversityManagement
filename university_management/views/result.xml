@@ -8,7 +8,7 @@
             <tree string="Result">
                 <field name="student_id"/>
                 <field name="student_name"/>
-                <field name="student_email"/>
+                <field name="email"/>
                 <field name="student_department"/>
                 <field name="course"/>
                 <field name="semester"/>
@@ -42,7 +42,7 @@
                         <group>
                             <field name="student_department"/>
                             <field name="student_name"/>
-                            <field name="student_email"/>
+                            <field name="email"/>
 
                         </group>
                     </group>
@@ -66,5 +66,5 @@
     </record>
 
     <menuitem id="uni_result_menu" name="Result" parent="university_root_menu" action="action_result"
-              sequence="10"/>
+              sequence="11"/>
 </odoo>

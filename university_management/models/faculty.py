@@ -5,7 +5,7 @@ import re
 
 class Faculty(models.Model):
     _name = 'uni.faculty'
-    _rec_name = 'department'
+    _rec_name = 'name'
     _sql_constraints = [
         ('unique_email_faculty',
          'UNIQUE(faculty_email)',

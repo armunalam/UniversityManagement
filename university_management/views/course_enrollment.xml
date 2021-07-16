@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--tree view of the course_enrollment model-->
+    <record id="course_enrollment_tree" model="ir.ui.view">
+        <field name="name">uni.course_enrollment.tree</field>
+        <field name="model">uni.course_enrollment</field>
+        <field name="arch" type="xml">
+            <tree string="Course Enrollment">
+                <field name="student_enrollment"/>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="department"/>
+                <field name="course_enrollment"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--form view of the course_enrollment model-->
+    <record id="course_enrollment_form" model="ir.ui.view">
+        <field name="name">uni.course_enrollment.form</field>
+        <field name="model">uni.course_enrollment</field>
+        <field name="arch" type="xml">
+            <form string="Course Enrollment">
+                <header>
+                    Course Enrollment
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+
+                    </div>
+                    <group>
+                        <group>
+                            <field name="student_enrollment"/>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="department"/>
+                        </group>
+                        <group>
+                            <field name="course_enrollment"/>
+                            <field name="date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--action of the Course Enrollment menu-->
+    <record id="action_course_enrollment" model="ir.actions.act_window">
+        <field name="name">Course Enrollment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">uni.course_enrollment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Enter course enrollment information
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="uni_course_enrollment_menu" name="Course Enrollment" parent="university_root_menu"
+              action="action_course_enrollment" sequence="10"/>
+
+
+</odoo>
